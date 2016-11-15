@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="9cC-dy-Fei">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--选择交互类型-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="朦胧背景图.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="TrK-e2-0Gm">
+                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qqs-Sq-5Lo">
+                                <rect key="frame" x="0.0" y="304" width="414" height="107"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Qqs-Sq-5Lo" secondAttribute="height" multiplier="414:107" id="Jc6-OX-ahh"/>
+                                </constraints>
+                                <state key="normal" image="OC调用JS函数.png"/>
+                                <connections>
+                                    <action selector="pushOCCallJSViewController:" destination="BYZ-38-t0r" eventType="touchUpInside" id="K7v-6r-PaA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="esy-Ts-I8R">
+                                <rect key="frame" x="0.0" y="164" width="414" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="esy-Ts-I8R" secondAttribute="height" multiplier="207:50" id="Z83-KZ-Mse"/>
+                                </constraints>
+                                <state key="normal" image="JS调用OC代码.png"/>
+                                <connections>
+                                    <action selector="pushJSCallOCViewController:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gyg-eX-k0O"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="esy-Ts-I8R" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="4gl-Ia-C2p"/>
+                            <constraint firstItem="Qqs-Sq-5Lo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="CbC-a3-Yhn"/>
+                            <constraint firstItem="Qqs-Sq-5Lo" firstAttribute="top" secondItem="esy-Ts-I8R" secondAttribute="bottom" constant="40" id="IJs-TF-6qh"/>
+                            <constraint firstAttribute="trailing" secondItem="esy-Ts-I8R" secondAttribute="trailing" id="Jin-bx-Lri"/>
+                            <constraint firstItem="TrK-e2-0Gm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Jqu-wi-FBS"/>
+                            <constraint firstItem="TrK-e2-0Gm" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="dB0-Ip-1xK"/>
+                            <constraint firstAttribute="trailing" secondItem="TrK-e2-0Gm" secondAttribute="trailing" id="dLu-FM-Fyk"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="TrK-e2-0Gm" secondAttribute="bottom" id="ijt-wx-b8K"/>
+                            <constraint firstItem="esy-Ts-I8R" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="100" id="j4M-Rb-fyp"/>
+                            <constraint firstAttribute="trailing" secondItem="Qqs-Sq-5Lo" secondAttribute="trailing" id="tty-sq-epi"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="选择交互类型" id="Oko-Xl-IGd"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="378" y="237"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="pnK-LQ-d3s">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9cC-dy-Fei" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hvq-Gm-6n3">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="XOR-DK-vTt"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bVz-K2-tUC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-247" y="237"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="JS调用OC代码.png" width="836" height="196"/>
+        <image name="OC调用JS函数.png" width="839" height="196"/>
+        <image name="朦胧背景图.jpg" width="1024" height="1536"/>
+    </resources>
+</document>
