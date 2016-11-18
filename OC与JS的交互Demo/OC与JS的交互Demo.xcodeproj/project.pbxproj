@@ -23,6 +23,9 @@
 		1567E8ED1DDA2587000E3304 /* 53ada3ab8c252.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1567E8E71DDA2587000E3304 /* 53ada3ab8c252.jpg */; };
 		1567E8EE1DDA2587000E3304 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 1567E8E81DDA2587000E3304 /* index.html */; };
 		1567E8EF1DDA2587000E3304 /* ocCallJS.html in Resources */ = {isa = PBXBuildFile; fileRef = 1567E8EA1DDA2587000E3304 /* ocCallJS.html */; };
+		EB3AB3C21DDE939500FFEADD /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB3AB3C11DDE939500FFEADD /* JavaScriptCore.framework */; };
+		EB3AB3C51DDE95B400FFEADD /* OtherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB3AB3C41DDE95B400FFEADD /* OtherViewController.m */; };
+		EB3AB3C71DDE9FD300FFEADD /* HelloWorld.html in Resources */ = {isa = PBXBuildFile; fileRef = EB3AB3C61DDE9FD300FFEADD /* HelloWorld.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +51,10 @@
 		1567E8E71DDA2587000E3304 /* 53ada3ab8c252.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 53ada3ab8c252.jpg; sourceTree = "<group>"; };
 		1567E8E81DDA2587000E3304 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
 		1567E8EA1DDA2587000E3304 /* ocCallJS.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = ocCallJS.html; sourceTree = "<group>"; };
+		EB3AB3C11DDE939500FFEADD /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		EB3AB3C31DDE95B400FFEADD /* OtherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OtherViewController.h; sourceTree = "<group>"; };
+		EB3AB3C41DDE95B400FFEADD /* OtherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OtherViewController.m; sourceTree = "<group>"; };
+		EB3AB3C61DDE9FD300FFEADD /* HelloWorld.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = HelloWorld.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB3AB3C21DDE939500FFEADD /* JavaScriptCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,6 +75,7 @@
 				1567E8E21DDA2587000E3304 /* HelloWorld */,
 				1567E8B81DD70690000E3304 /* OC与JS的交互Demo */,
 				1567E8B71DD70690000E3304 /* Products */,
+				EB3AB3C01DDE939500FFEADD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -89,6 +98,8 @@
 				1567E8D71DD70B43000E3304 /* JavaScriptCallOCViewController.m */,
 				1567E8D91DD70B7F000E3304 /* OCCallJavaScriptViewController.h */,
 				1567E8DA1DD70B7F000E3304 /* OCCallJavaScriptViewController.m */,
+				EB3AB3C31DDE95B400FFEADD /* OtherViewController.h */,
+				EB3AB3C41DDE95B400FFEADD /* OtherViewController.m */,
 				1567E8D01DD70829000E3304 /* 朦胧背景图.jpg */,
 				1567E8D21DD70988000E3304 /* JS调用OC代码.png */,
 				1567E8D41DD70A47000E3304 /* OC调用JS函数.png */,
@@ -117,6 +128,7 @@
 				1567E8E51DDA2587000E3304 /* favicon.ico */,
 				1567E8E61DDA2587000E3304 /* img */,
 				1567E8E81DDA2587000E3304 /* index.html */,
+				EB3AB3C61DDE9FD300FFEADD /* HelloWorld.html */,
 				1567E8E91DDA2587000E3304 /* js */,
 				1567E8EA1DDA2587000E3304 /* ocCallJS.html */,
 			);
@@ -146,6 +158,14 @@
 			path = js;
 			sourceTree = "<group>";
 		};
+		EB3AB3C01DDE939500FFEADD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EB3AB3C11DDE939500FFEADD /* JavaScriptCore.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -172,7 +192,7 @@
 		1567E8AE1DD70690000E3304 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = Don9;
 				TargetAttributes = {
 					1567E8B51DD70690000E3304 = {
@@ -209,6 +229,7 @@
 				1567E8EF1DDA2587000E3304 /* ocCallJS.html in Resources */,
 				1567E8C91DD70690000E3304 /* LaunchScreen.storyboard in Resources */,
 				1567E8C61DD70690000E3304 /* Assets.xcassets in Resources */,
+				EB3AB3C71DDE9FD300FFEADD /* HelloWorld.html in Resources */,
 				1567E8EE1DDA2587000E3304 /* index.html in Resources */,
 				1567E8D11DD70829000E3304 /* 朦胧背景图.jpg in Resources */,
 				1567E8EB1DDA2587000E3304 /* .project in Resources */,
@@ -227,6 +248,7 @@
 				1567E8C11DD70690000E3304 /* ViewController.m in Sources */,
 				1567E8BE1DD70690000E3304 /* AppDelegate.m in Sources */,
 				1567E8DB1DD70B7F000E3304 /* OCCallJavaScriptViewController.m in Sources */,
+				EB3AB3C51DDE95B400FFEADD /* OtherViewController.m in Sources */,
 				1567E8D81DD70B43000E3304 /* JavaScriptCallOCViewController.m in Sources */,
 				1567E8BB1DD70690000E3304 /* main.m in Sources */,
 			);
@@ -268,8 +290,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -312,8 +336,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -379,6 +405,7 @@
 				1567E8CF1DD70690000E3304 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

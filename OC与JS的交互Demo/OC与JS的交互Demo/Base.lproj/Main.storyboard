@@ -1,9 +1,10 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="9cC-dy-Fei">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="9cC-dy-Fei">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--选择交互类型-->
@@ -15,14 +16,10 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="朦胧背景图.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="TrK-e2-0Gm">
-                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qqs-Sq-5Lo">
-                                <rect key="frame" x="0.0" y="304" width="414" height="107"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Qqs-Sq-5Lo" secondAttribute="height" multiplier="414:107" id="Jc6-OX-ahh"/>
                                 </constraints>
@@ -32,7 +29,6 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="esy-Ts-I8R">
-                                <rect key="frame" x="0.0" y="164" width="414" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="esy-Ts-I8R" secondAttribute="height" multiplier="207:50" id="Z83-KZ-Mse"/>
                                 </constraints>
@@ -41,8 +37,9 @@
                                     <action selector="pushJSCallOCViewController:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gyg-eX-k0O"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="朦胧背景图.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="TrK-e2-0Gm"/>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="esy-Ts-I8R" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="4gl-Ia-C2p"/>
                             <constraint firstItem="Qqs-Sq-5Lo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="CbC-a3-Yhn"/>
@@ -56,19 +53,51 @@
                             <constraint firstAttribute="trailing" secondItem="Qqs-Sq-5Lo" secondAttribute="trailing" id="tty-sq-epi"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="选择交互类型" id="Oko-Xl-IGd"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <navigationItem key="navigationItem" title="选择交互类型" id="Oko-Xl-IGd">
+                        <barButtonItem key="rightBarButtonItem" title="other" id="V7X-Bi-y9w">
+                            <connections>
+                                <segue destination="vpf-Im-cIL" kind="show" id="M2c-Rz-6Ei"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="378" y="237"/>
+            <point key="canvasLocation" x="482" y="236"/>
+        </scene>
+        <!--Other View Controller-->
+        <scene sceneID="4dh-Vy-e4L">
+            <objects>
+                <viewController id="vpf-Im-cIL" customClass="OtherViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="F4l-vr-VFA"/>
+                        <viewControllerLayoutGuide type="bottom" id="e9H-HL-zfo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hHE-7E-3o5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fDA-fN-ZfJ">
+                                <frame key="frameInset" minY="64" width="375" height="284"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="fDA-fN-ZfJ" id="wSr-Ao-seB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Piz-B0-fcE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1256.8" y="235.23238380809596"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="pnK-LQ-d3s">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9cC-dy-Fei" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="hvq-Gm-6n3">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

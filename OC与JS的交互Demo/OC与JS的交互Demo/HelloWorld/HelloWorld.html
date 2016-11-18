@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+		<title></title>
+
+	</head>
+    <body>
+    <input type="button" onclick="jsCallNative()" value="jsCallNative"> </input>
+    <input type="button" onclick="jsCallNative2()" value="jsCallNative2"> </input>
+    <div>
+    <button onclick="native.callCamera();">调用OC中myLog方法</button>
+    </div>
+    </body>
+	<script type="text/javascript">
+        
+        function jsCallNative() {
+            WBBridge.callCamera();
+        }
+    
+    function jsCallNative2() {
+        var shareInfo = "分享HELLO";
+        var str = WBBridge.share(shareInfo);
+        alert(str)
+    }
+        
+	</script>
+
+</html>
