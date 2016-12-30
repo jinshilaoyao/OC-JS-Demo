@@ -17,12 +17,13 @@
 	<script type="text/javascript">
         
         function jsCallNative() {
-            WBBridge.callCamera();
+            var json = "json String"
+            window.WBBridge.callCamera(json);
         }
     
     function jsCallNative2() {
         var shareInfo = "分享HELLO";
-        var str = WBBridge.share(shareInfo);
+        var str = window.WBBridge.share(shareInfo);
         alert(str)
     }
         

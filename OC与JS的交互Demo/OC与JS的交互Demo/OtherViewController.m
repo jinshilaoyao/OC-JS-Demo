@@ -11,7 +11,7 @@
 
 @protocol WebViewJSExport <JSExport>
 
-- (void)callCamera;
+- (void)callCamera:(NSString *)str;
 - (NSString *)share:(NSString *)shareString;
 
 @end
@@ -19,6 +19,7 @@
 @interface OtherViewController ()<UIWebViewDelegate,WebViewJSExport>
 @property (nonatomic,strong) JSContext * context;
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
+
 @end
 
 @implementation OtherViewController
@@ -28,7 +29,7 @@
     // Do any additional setup after loading the view.
     
     [self initWebView];
-    
+
 }
 
 - (void)initWebView {
@@ -49,14 +50,14 @@
     
 //    [_context setObject:self forKeyedSubscript:@"WBBridge"];
     self.context[@"WBBridge"] = self;
-    
     _context.exceptionHandler = ^(JSContext * context, JSValue * value) {
         context.exception = value;
         NSLog(@"异常信息 %@",value);
     };
 }
-- (void)callCamera {
+- (void)callCamera:(NSString *)str {
     NSLog(@"调用相机");
+    NSLog(@"%@",str);
 }
 - (NSString *)share:(NSString *)shareString {
     dispatch_async(dispatch_get_main_queue(), ^{

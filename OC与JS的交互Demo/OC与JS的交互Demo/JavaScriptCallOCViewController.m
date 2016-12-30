@@ -13,7 +13,7 @@
 
 JSExportAs
 (myLog ,
- - (void)myOCLog :(NSString *)string
+ - (void)myOCLog:(NSString *)string
  );
 
 
@@ -32,7 +32,7 @@ JSExportAs
 @implementation JavaScriptCallOCViewController
 
 
-- (void)myOCLog :(NSString *)string{
+- (void)myOCLog:(NSString *)string{
 
     NSLog(@"你好,世界!");
     
@@ -92,12 +92,13 @@ JSExportAs
     };
     
     self.context[@"native"] = self;
+
 }
 
 - (void)dealloc {
     NSLog(@"%@",@"aaaaa");
 }
-
-
-
 @end
+
+
+

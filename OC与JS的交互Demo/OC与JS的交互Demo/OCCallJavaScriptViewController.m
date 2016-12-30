@@ -52,9 +52,6 @@
     {
         context.exception = exceptionValue;
     };
-    
-
-
 }
 
 -(void)changeWebTxet{
@@ -63,8 +60,6 @@
     JSValue *labelAction = self.context[@"labelAction"];
     
     [labelAction callWithArguments:@[@"你好,JS世界!"]];
-
-
 }
 
 
